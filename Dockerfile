@@ -1,7 +1,5 @@
-# meedan/elasticsearch
-# elasticsearch 6.3 with analysis-icu plugin
-
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.3
-MAINTAINER sysops@meedan.com
-
-RUN elasticsearch-plugin install analysis-icu 
+FROM docker.elastic.co/elasticsearch/elasticsearch:6.3.0
+COPY ./docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
+CMD ["/docker-entrypoint.sh"]
+RUN bin/elasticsearch-plugin install analysis-icu
