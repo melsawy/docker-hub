@@ -1,7 +1,7 @@
 # meedan/elasticsearch
 # elasticsearch 6.3 with analysis-icu plugin
 
-FROM elasticsearch:6.3
+FROM elasticsearch:6.3.0
 MAINTAINER sysops@meedan.com
 
 
